@@ -4,26 +4,18 @@ import {CONFIG,DOMAINS,COORDS} from './data'
 const cactus=(x,y,h,c)=><g fill={c} key={x+'-'+y}><rect x={x} y={y-h} width="2" height={h}/><rect x={x-3} y={y-h*.6} width="1.5" height={h*.3}/><rect x={x-3} y={y-h*.6+h*.3-1.5} width="4" height="1.5"/><rect x={x+4} y={y-h*.8} width="1.5" height={h*.3}/><rect x={x+2} y={y-h*.8+h*.3-1.5} width="3.5" height="1.5"/></g>
 
 const FLOCK_CROWS = [
-  // Lead Crow (crossing near the sun with energetic wing flapping)
-  { id: 'c1', top: 16, size: 56, flightSpeed: 14, flapSpeed: '0.38s', delay: 0, dir: 'ltr', tilt: -4, opacity: 0.98 },
-  // Upper Wingman (slightly smaller, climbing)
-  { id: 'c2', top: 9, size: 44, flightSpeed: 14, flapSpeed: '0.34s', delay: 0.7, dir: 'ltr', tilt: -8, opacity: 0.92 },
-  // Lower Wingman
-  { id: 'c3', top: 22, size: 48, flightSpeed: 14, flapSpeed: '0.40s', delay: 1.4, dir: 'ltr', tilt: 2, opacity: 0.92 },
-  // Trailing crow
-  { id: 'c4', top: 14, size: 38, flightSpeed: 14, flapSpeed: '0.36s', delay: 2.1, dir: 'ltr', tilt: -5, opacity: 0.88 },
-  // Solo high flyer crossing right-to-left
-  { id: 'c5', top: 6, size: 36, flightSpeed: 18, flapSpeed: '0.42s', delay: 3.2, dir: 'rtl', tilt: 6, opacity: 0.8 },
-  // Mid-altitude crow flying right-to-left
-  { id: 'c6', top: 28, size: 42, flightSpeed: 16, flapSpeed: '0.39s', delay: 6.5, dir: 'rtl', tilt: -3, opacity: 0.85 },
-  // Distant small flock members
-  { id: 'c7', top: 12, size: 24, flightSpeed: 22, flapSpeed: '0.30s', delay: 8.5, dir: 'ltr', tilt: -6, opacity: 0.55 },
-  { id: 'c8', top: 8, size: 20, flightSpeed: 22, flapSpeed: '0.28s', delay: 9.3, dir: 'ltr', tilt: -10, opacity: 0.5 },
-  { id: 'c9', top: 15, size: 22, flightSpeed: 22, flapSpeed: '0.32s', delay: 10.2, dir: 'ltr', tilt: 0, opacity: 0.52 },
-  // Big dramatic foreground crow
-  { id: 'c10', top: 20, size: 66, flightSpeed: 11, flapSpeed: '0.35s', delay: 12.0, dir: 'ltr', tilt: -2, opacity: 0.98 },
-  // Fast low flyer
-  { id: 'c11', top: 26, size: 48, flightSpeed: 13, flapSpeed: '0.36s', delay: 15.0, dir: 'ltr', tilt: -5, opacity: 0.9 },
+  // Spread across the whole sky smoothly from t=0
+  { id: 'c1', top: 15, size: 56, flightSpeed: 14, flapSpeed: '0.38s', delay: 0, dir: 'ltr', tilt: -4, opacity: 0.98 },
+  { id: 'c2', top: 9, size: 44, flightSpeed: 14, flapSpeed: '0.34s', delay: -2.5, dir: 'ltr', tilt: -8, opacity: 0.92 },
+  { id: 'c3', top: 22, size: 48, flightSpeed: 14, flapSpeed: '0.40s', delay: -5.0, dir: 'ltr', tilt: 2, opacity: 0.92 },
+  { id: 'c4', top: 13, size: 38, flightSpeed: 14, flapSpeed: '0.36s', delay: -7.5, dir: 'ltr', tilt: -5, opacity: 0.88 },
+  { id: 'c5', top: 6, size: 36, flightSpeed: 18, flapSpeed: '0.42s', delay: -3.0, dir: 'rtl', tilt: 6, opacity: 0.8 },
+  { id: 'c6', top: 28, size: 42, flightSpeed: 16, flapSpeed: '0.39s', delay: -8.0, dir: 'rtl', tilt: -3, opacity: 0.85 },
+  { id: 'c7', top: 11, size: 24, flightSpeed: 22, flapSpeed: '0.30s', delay: -11.0, dir: 'ltr', tilt: -6, opacity: 0.55 },
+  { id: 'c8', top: 8, size: 20, flightSpeed: 22, flapSpeed: '0.28s', delay: -14.0, dir: 'ltr', tilt: -10, opacity: 0.5 },
+  { id: 'c9', top: 16, size: 22, flightSpeed: 22, flapSpeed: '0.32s', delay: -17.0, dir: 'ltr', tilt: 0, opacity: 0.52 },
+  { id: 'c10', top: 19, size: 66, flightSpeed: 11, flapSpeed: '0.35s', delay: -9.0, dir: 'ltr', tilt: -2, opacity: 0.98 },
+  { id: 'c11', top: 25, size: 48, flightSpeed: 13, flapSpeed: '0.36s', delay: -4.0, dir: 'ltr', tilt: -5, opacity: 0.9 },
 ]
 
 const Crow = ({ id, top, size = 48, flightSpeed = 15, flapSpeed = '0.38s', delay = 0, dir = 'ltr', tilt = 0, opacity = 0.95 }) => (
