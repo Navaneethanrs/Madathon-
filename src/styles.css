@@ -101,7 +101,7 @@ h2{font-size:clamp(16px,3.4vw,28px);color:var(--cream);letter-spacing:2px}
 .card p{font-size:20px;line-height:1.1;opacity:.92}
 .chips{display:flex;gap:6px;flex-wrap:wrap}.chips span{border:1px solid #6a3a28;padding:3px 8px;font-size:16px;background:#2a120a}
 .acts{display:flex;gap:10px;margin-top:auto;padding-top:6px}
-.kl{height:64px;align-self:flex-start;background:#fff;padding:4px}
+.kl{height:64px;max-width:160px;object-fit:contain;align-self:flex-start;background:#fff;padding:6px;border:2px solid var(--sun);box-shadow:3px 3px 0 var(--rust)}
 .mot{display:flex;gap:8px;flex-wrap:wrap}.mot span{background:var(--sun);color:#140604;font-size:9px;padding:8px}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
 .stats .card{align-items:center;text-align:center}.stats b{font-size:clamp(24px,5vw,44px);color:var(--sun);text-shadow:3px 3px 0 var(--rust)}

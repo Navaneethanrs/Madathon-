@@ -109,7 +109,7 @@ export default function App(){
   </nav>
 
   {stage<2&&<div className="intro">
-    {stage===0&&<div className="presents"><div className="logos"><img src="/kec-logo.png" alt="KEC"/><span className="bar"/><div className="madc px">MADC</div></div><p className="px pr">PRESENTS</p></div>}
+    {stage===0&&<div className="presents"><div className="logos"><img src="/kec-logo.png" alt="KEC"/><span className="bar"/><img src="/madc-logo.png" alt="MADC" className="mlogo"/></div><p className="px pr">PRESENTS</p></div>}
     {stage===1&&<div className="boot px"><p>LOADING NOVA ENGINE...</p><div className="pbar"><i/></div></div>}
     <button className="skip px" onClick={()=>setStage(2)}>SKIP ▶</button>
   </div>}
@@ -145,7 +145,7 @@ export default function App(){
   <section id="about"><h2 className="px rv">ABOUT US</h2><i className="ul"/><p className="sb rv">The club behind MADATHON</p>
     <div className="grid g2">
       <article className="card rv"><img className="kl" src="/kec-logo.png" alt="KEC"/><h3 className="px">ABOUT KEC</h3><p>Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the institution with its good infrastructure facility and excellent academic records has emerged as a center of excellence. The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future.</p></article>
-      <article className="card rv"><div className="ic">📱</div><h3 className="px">ABOUT MADC</h3><p>MADC – Mobile Application and App Development Club. Every great app starts as a small idea; we help students dream it up, build it with care and ship it for real people to use.</p><div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div></article>
+      <article className="card rv"><img className="kl" src="/madc-logo.png" alt="MADC"/><h3 className="px">ABOUT MADATHON</h3><p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application and App Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across four exciting domains: App Development, Web Development, Cyber Security, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p><div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div></article>
     </div>
     <div className="stats"><div className="card rv"><b className="px">120+</b><span>MEMBERS</span></div><div className="card rv"><b className="px">40+</b><span>OFFICE BEARERS</span></div></div>
   </section>
