@@ -144,7 +144,7 @@ export default function App(){
 
   <section id="about"><h2 className="px rv">ABOUT US</h2><i className="ul"/><p className="sb rv">The club behind MADATHON</p>
     <div className="grid g2">
-      <article className="card rv"><img className="kl" src="/kec-logo.png" alt="KEC"/><h3 className="px">ABOUT KEC</h3><p>We are the club of KEC – Kongu Engineering College, a place that nurtures builders, thinkers and problem solvers.</p></article>
+      <article className="card rv"><img className="kl" src="/kec-logo.png" alt="KEC"/><h3 className="px">ABOUT KEC</h3><p>Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the institution with its good infrastructure facility and excellent academic records has emerged as a center of excellence. The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future.</p></article>
       <article className="card rv"><div className="ic">📱</div><h3 className="px">ABOUT MADC</h3><p>MADC – Mobile Application and App Development Club. Every great app starts as a small idea; we help students dream it up, build it with care and ship it for real people to use.</p><div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div></article>
     </div>
     <div className="stats"><div className="card rv"><b className="px">120+</b><span>MEMBERS</span></div><div className="card rv"><b className="px">40+</b><span>OFFICE BEARERS</span></div></div>
