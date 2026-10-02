@@ -144,8 +144,25 @@ export default function App(){
 
   <section id="about"><h2 className="px rv">ABOUT US</h2><i className="ul"/><p className="sb rv">The club behind MADATHON</p>
     <div className="grid g2">
-      <article className="card rv"><img className="kl" src="/kec-logo.png" alt="KEC"/><h3 className="px">ABOUT KEC</h3><p>Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the institution with its good infrastructure facility and excellent academic records has emerged as a center of excellence. The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future.</p></article>
-      <article className="card rv"><img className="kl" src="/madc-logo.png" alt="MADC"/><h3 className="px">ABOUT MADATHON</h3><p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application and App Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across four exciting domains: App Development, Web Development, Cyber Security, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p><div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div></article>
+      <article className="card rv">
+        <img className="kl" src="/kec-logo.png" alt="KEC"/>
+        <h3 className="px">ABOUT KEC</h3>
+        <p>Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the institution with its good infrastructure facility and excellent academic records has emerged as a center of excellence. The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future.</p>
+      </article>
+
+      <article className="card rv">
+        <img className="kl" src="/madc-logo.png" alt="MADC Club"/>
+        <h3 className="px">ABOUT MADC CLUB</h3>
+        <p>MADC – Mobile Application & App Development Club of KEC is a vibrant community where students learn, build, and innovate through hands-on workshops, real-world projects, hackathons, and technical events. Explore modern technologies like Flutter, Android, React Native, Firebase, APIs, AI, and UI/UX while turning ideas into impactful applications. Collaborate with passionate developers, share knowledge, build your portfolio, and grow together as a developer.</p>
+        <div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div>
+      </article>
+
+      <article className="card full rv">
+        <img className="kl wide" src="/madathon-logo.png" alt="MADATHON"/>
+        <h3 className="px">ABOUT MADATHON</h3>
+        <p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application and App Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across four exciting domains: App Development, Web Development, Cyber Security, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p>
+        <div className="mot px"><span>24-HOUR HACKATHON</span><span>4 DOMAINS</span><span>INNOVATION</span><span>REAL-WORLD IMPACT</span></div>
+      </article>
     </div>
     <div className="stats"><div className="card rv"><b className="px">120+</b><span>MEMBERS</span></div><div className="card rv"><b className="px">40+</b><span>OFFICE BEARERS</span></div></div>
   </section>
