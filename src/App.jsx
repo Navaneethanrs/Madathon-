@@ -111,6 +111,10 @@ export default function App(){
   {stage<2&&<div className="intro">
     {stage===0&&<div className="presents">
       <div className="logos-text">
+        <span className="hud-corner tl"/>
+        <span className="hud-corner tr"/>
+        <span className="hud-corner bl"/>
+        <span className="hud-corner br"/>
         <div className="intro-brand">
           <div className="brand-logo-text kec-brand px">KEC</div>
           <div className="brand-full-name">KONGU ENGINEERING COLLEGE</div>
