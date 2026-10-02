@@ -140,7 +140,7 @@ export default function App(){
     </div>
     <div className="shade"/>
     <div className="hc">
-      <p className="px org">MADC · MOBILE APPLICATION AND APP DEVELOPMENT CLUB</p>
+      <p className="px org">MADC · MOBILE APPLICATION DEVELOPMENT CLUB</p>
       <h1 className="px title">MADATHON</h1>
       <div className="px tag">24-HOUR HACKATHON</div>
       <p className="px ttl">COUNTDOWN TO EVENT</p>
@@ -173,14 +173,14 @@ export default function App(){
       <article className="card rv">
         <img className="kl" src="/madc-logo.png" alt="MADC Club"/>
         <h3 className="px">ABOUT MADC CLUB</h3>
-        <p>MADC – Mobile Application & App Development Club of KEC is a vibrant community where students learn, build, and innovate through hands-on workshops, real-world projects, hackathons, and technical events. Explore modern technologies like Flutter, Android, React Native, Firebase, APIs, AI, and UI/UX while turning ideas into impactful applications. Collaborate with passionate developers, share knowledge, build your portfolio, and grow together as a developer.</p>
+        <p>MADC – Mobile Application Development Club of KEC is a vibrant community where students learn, build, and innovate through hands-on workshops, real-world projects, hackathons, and technical events. Explore modern technologies like Flutter, Android, React Native, Firebase, APIs, AI, and UI/UX while turning ideas into impactful applications. Collaborate with passionate developers, share knowledge, build your portfolio, and grow together as a developer.</p>
         <div className="mot px"><span>INNOVATE</span><span>BUILD</span><span>DEPLOY</span></div>
       </article>
 
       <article className="card full rv">
         <img className="kl wide" src="/madathon-logo.png" alt="MADATHON"/>
         <h3 className="px">ABOUT MADATHON</h3>
-        <p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application and App Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across three exciting domains: App Development, Web Development, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p>
+        <p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across three exciting domains: App Development, Web Development, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p>
         <div className="mot px"><span>24-HOUR HACKATHON</span><span>3 DOMAINS</span><span>INNOVATION</span><span>REAL-WORLD IMPACT</span></div>
       </article>
     </div>

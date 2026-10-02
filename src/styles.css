@@ -19,13 +19,13 @@ nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:60;display:flex;alig
 .hud-corner.tr{top:-2px;right:-2px;border-top:3px solid var(--sun);border-right:3px solid var(--sun)}
 .hud-corner.bl{bottom:-2px;left:-2px;border-bottom:3px solid var(--sun);border-left:3px solid var(--sun)}
 .hud-corner.br{bottom:-2px;right:-2px;border-bottom:3px solid var(--sun);border-right:3px solid var(--sun)}
-.brand-divider{width:2px;height:90px;background:linear-gradient(to bottom,transparent,var(--sun),var(--rust),transparent);box-shadow:0 0 8px rgba(255,177,42,0.5)}
-.intro-brand{display:flex;flex-direction:column;align-items:center;gap:4px}
-.brand-logo-text{font-size:clamp(32px,5.5vw,52px);letter-spacing:4px;line-height:1.1}
+.brand-divider{width:2px;height:90px;background:linear-gradient(to bottom,transparent,var(--sun),var(--rust),transparent);box-shadow:0 0 8px rgba(255,177,42,0.5);flex-shrink:0}
+.intro-brand{display:flex;flex-direction:column;align-items:center;gap:6px}
+.brand-logo-text{font-size:clamp(30px,5vw,52px);letter-spacing:4px;line-height:1}
 .brand-logo-text.kec-brand{color:var(--sun);text-shadow:4px 4px 0 var(--rust),7px 7px 0 #000}
 .brand-logo-text.madc-brand{color:var(--sun);text-shadow:4px 4px 0 var(--rust),7px 7px 0 #000}
-.brand-full-name{font-size:clamp(13px,2vw,18px);color:#fff7dc;letter-spacing:2px;font-family:'VT323',monospace;text-shadow:1px 1px 2px #000;margin-top:2px}
-.brand-motto{font-size:clamp(8px,1.2vw,10px);color:#fbbf24;letter-spacing:2px;font-family:'Press Start 2P',monospace;opacity:.85;margin-top:2px}
+.brand-full-name{font-size:clamp(12px,1.8vw,18px);color:#fff7dc;letter-spacing:1.5px;font-family:'VT323',monospace;text-shadow:1px 1px 2px #000;line-height:1.25;margin:4px 0 2px}
+.brand-motto{font-size:clamp(7px,1.1vw,10px);color:#fbbf24;letter-spacing:1.5px;font-family:'Press Start 2P',monospace;opacity:.9;line-height:1.5;margin-top:4px}
 .pr{margin-top:24px;font-size:20px;letter-spacing:8px;color:#ffcf5a;text-shadow:0 0 8px rgba(255,177,42,0.4);animation:glitch 1.6s .6s both}
 .boot{width:min(420px,86vw);font-size:11px;color:var(--sun)}.pbar{height:22px;border:3px solid var(--cream);padding:3px;margin-top:16px}
 .pbar i{display:block;height:100%;background:repeating-linear-gradient(90deg,var(--sun) 0 10px,var(--or) 10px 14px);animation:fill 2.6s linear both}
@@ -131,5 +131,13 @@ footer .px{font-size:10px;color:var(--sun);margin-bottom:8px}
 .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,120px);background:var(--sun);color:#140604;padding:12px 16px;font-size:10px;border:3px solid #140604;z-index:90;transition:.3s}
 .toast.show{transform:translate(-50%,0)}
 @media(max-width:820px){.burger{display:block}.links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:#140604;padding:14px;border-bottom:3px solid var(--rust)}.links.open{display:flex}.links a{font-size:11px;text-align:center}#about .g2{grid-template-columns:1fr}.card.full{grid-column:auto}}
+@media(max-width:640px){
+  .logos-text{flex-direction:column;gap:18px;padding:22px 18px;width:min(92vw,360px)}
+  .brand-divider{width:75%;height:2px;background:linear-gradient(to right,transparent,var(--sun),var(--rust),transparent);box-shadow:0 0 8px rgba(255,177,42,0.5)}
+  .brand-logo-text{font-size:32px;letter-spacing:3px}
+  .brand-full-name{font-size:16px;letter-spacing:1px;line-height:1.25;margin:4px 0 2px}
+  .brand-motto{font-size:8px;letter-spacing:1px;line-height:1.4;margin-top:4px}
+  .intro-brand{gap:6px}
+}
 @media(max-width:480px){.cb{width:60px}.cb b{font-size:14px}.stats{grid-template-columns:1fr}.logos img{height:46px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
