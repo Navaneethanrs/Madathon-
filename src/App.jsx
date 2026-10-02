@@ -148,6 +148,7 @@ export default function App(){
         <img className="kl" src="/kec-logo.png" alt="KEC"/>
         <h3 className="px">ABOUT KEC</h3>
         <p>Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the institution with its good infrastructure facility and excellent academic records has emerged as a center of excellence. The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future.</p>
+        <div className="mot px"><span>ESTD 1984</span><span>AUTONOMOUS</span><span>NAAC 'A' GRADE</span></div>
       </article>
 
       <article className="card rv">
