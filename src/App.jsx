@@ -109,7 +109,22 @@ export default function App(){
   </nav>
 
   {stage<2&&<div className="intro">
-    {stage===0&&<div className="presents"><div className="logos"><img src="/kec-logo.png" alt="KEC"/><span className="bar"/><img src="/madc-logo.png" alt="MADC" className="mlogo"/></div><p className="px pr">PRESENTS</p></div>}
+    {stage===0&&<div className="presents">
+      <div className="logos-text">
+        <div className="intro-brand">
+          <div className="brand-logo-text kec-brand px">KEC</div>
+          <div className="brand-full-name">KONGU ENGINEERING COLLEGE</div>
+          <div className="brand-motto">TRANSFORM YOURSELF</div>
+        </div>
+        <span className="brand-divider"/>
+        <div className="intro-brand">
+          <div className="brand-logo-text madc-brand px">MADC</div>
+          <div className="brand-full-name">MOBILE APPLICATION DEVELOPMENT CLUB</div>
+          <div className="brand-motto">INNOVATE · BUILD · DEPLOY</div>
+        </div>
+      </div>
+      <p className="px pr">PRESENTS</p>
+    </div>}
     {stage===1&&<div className="boot px"><p>LOADING NOVA ENGINE...</p><div className="pbar"><i/></div></div>}
     <button className="skip px" onClick={()=>setStage(2)}>SKIP ▶</button>
   </div>}
