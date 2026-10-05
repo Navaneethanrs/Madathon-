@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react'
-import {CONFIG,DOMAINS,COORDS} from './data'
+import {CONFIG,DOMAINS,COORDS,PARTNERS} from './data'
 
 const cactus=(x,y,h,c)=><g fill={c} key={x+'-'+y}><rect x={x} y={y-h} width="2" height={h}/><rect x={x-3} y={y-h*.6} width="1.5" height={h*.3}/><rect x={x-3} y={y-h*.6+h*.3-1.5} width="4" height="1.5"/><rect x={x+4} y={y-h*.8} width="1.5" height={h*.3}/><rect x={x+2} y={y-h*.8+h*.3-1.5} width="3.5" height="1.5"/></g>
 
@@ -117,7 +117,7 @@ export default function App(){
     <a className="logo px" href="#home">MADATHON</a>
     <button className="burger px" onClick={()=>setOpen(!open)}>MENU</button>
     <div className={'links px'+(open?' open':'')}>
-      {[['home','HOME'],['events','EVENTS'],['about','ABOUT US'],['coord','COORDINATORS']].map(([i,t])=><a key={i} href={'#'+i} onClick={go}>{t}</a>)}
+      {[['home','HOME'],['events','EVENTS'],['about','ABOUT US'],['partners','PARTNERS'],['coord','COORDINATORS']].map(([i,t])=><a key={i} href={'#'+i} onClick={go}>{t}</a>)}
     </div>
   </nav>
 
@@ -206,6 +206,16 @@ export default function App(){
     <div className="stats"><div className="card rv"><b className="px">120+</b><span>MEMBERS</span></div><div className="card rv"><b className="px">40+</b><span>OFFICE BEARERS</span></div></div>
   </section>
 
+  <section id="partners"><h2 className="px rv">EVENT PARTNERS</h2><i className="ul"/><p className="sb rv">Proudly supported by industry &amp; community leaders</p>
+    <div className="grid g2 cc-wide">{PARTNERS.map(p=><article className="card partner-card rv" key={p.name}>
+      <span className="chip px">{p.role.toUpperCase()}</span>
+      <div className="partner-logo-wrap"><img className="partner-logo" src={p.logo} alt={p.name}/></div>
+      <h3 className="px">{p.name}</h3>
+      <p>{p.desc}</p>
+      <div className="acts"><a className="btn ghost px" href={p.link} target="_blank" rel="noreferrer">VISIT PARTNER ↗</a></div>
+    </article>)}</div>
+  </section>
+
   <section id="coord"><h2 className="px rv">EVENT COORDINATORS</h2><i className="ul"/><p className="sb rv">Reach out for assistance and queries</p>
     <div className="grid g2 cc">{COORDS.map(c=><article className="card rv" key={c.name}>
       <div className="av px">{c.ini}</div>
@@ -281,8 +291,7 @@ export default function App(){
         </div>
 
         <div className="modal-footer">
-          <Reg />
-          <button className="btn ghost px" onClick={() => setActiveModal(null)}>CLOSE</button>
+          <button className="btn px" onClick={() => setActiveModal(null)}>CLOSE</button>
         </div>
       </div>
     </div>

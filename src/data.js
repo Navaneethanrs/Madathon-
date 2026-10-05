@@ -88,4 +88,20 @@ export const COORDS=[
   {name:"Navaneethan RS",role:"Coordinator",ini:"NR",phone:"9342512455"},
   {name:"Dhanushree M",role:"Coordinator",ini:"DM",phone:"8438807326"}
 ]
+export const PARTNERS=[
+  {
+    name:"Nutz Technovation Private Limited",
+    role:"Event Partner",
+    logo:"./nutz-logo.png",
+    link:"https://www.linkedin.com/company/nutz/?originalSubdomain=in",
+    desc:"Leading software development and digital transformation company powering innovation."
+  },
+  {
+    name:"KEC.SQUAD",
+    role:"Promotion & Engagement Partner",
+    logo:"./kec-squad-logo.png",
+    link:"https://www.instagram.com/kec.squad/?hl=en",
+    desc:"Vibrant campus youth community amplifying student culture, events, and engagement."
+  }
+]
 
