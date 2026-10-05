@@ -1,6 +1,6 @@
 // ====== EDIT HERE: paste your links / dates when ready (leave "" until then) ======
 export const CONFIG={
-  REG_LINK:"",            // registration form link
+  REG_LINK:"https://forms.gle/6DwmqDZEUsJX8nGA6",            // registration form link
   REG_DEADLINE:"2026-10-16T09:00:00+05:30", // Countdown to October 16, 2026
   DATE_TEXT:"EVENT DATE · OCTOBER 16, 2026",
 }

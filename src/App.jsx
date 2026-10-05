@@ -78,6 +78,7 @@ export default function App(){
   const [stage,setStage]=useState(0)      // 0 presents, 1 boot, 2 hero
   const [tab,setTab]=useState('all')
   const [toast,setToast]=useState(false)
+  const [toastMsg,setToastMsg]=useState('COMING SOON !!')
   const [open,setOpen]=useState(false)
   const cd=useCountdown(CONFIG.REG_DEADLINE)
   const ready=stage>=2
@@ -91,10 +92,10 @@ export default function App(){
     const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15})
     document.querySelectorAll('.rv').forEach(x=>io.observe(x));return()=>io.disconnect()
   },[ready,tab])
-  const soon=()=>{setToast(true);setTimeout(()=>setToast(false),1800)}
+  const soon=(msg='COMING SOON !!')=>{setToastMsg(msg);setToast(true);setTimeout(()=>setToast(false),1800)}
   const Reg=({cls=''})=>CONFIG.REG_LINK
     ?<a className={'btn '+cls} href={CONFIG.REG_LINK} target="_blank" rel="noreferrer">REGISTER</a>
-    :<button className={'btn off '+cls} onClick={soon}>REGISTER</button>
+    :<button className={'btn off '+cls} onClick={()=>soon('REGISTRATION COMING SOON !')}>REGISTER</button>
   const cards=[{id:'pre',tag:'ROUND 1',name:'PRELIMS',icon:'🎤',desc:'Present your own problem statement to the juries. They evaluate your idea and the best teams advance to the finals.',chips:['PITCH','JURY EVALUATION'],link:null},
     ...DOMAINS.map(d=>({...d,tag:'FINALIST ROUND',chips:['24 HRS','DOMAIN']}))]
   const shown=cards.filter(c=>tab==='all'||(tab==='pre'?c.id==='pre':c.id!=='pre'))
@@ -157,7 +158,17 @@ export default function App(){
     <div className="grid">{shown.map(c=><article className="card rv" key={c.id}>
       <span className="chip px">{c.tag}</span><div className="ic">{c.icon}</div><h3 className="px">{c.name}</h3><p>{c.desc}</p>
       <div className="chips">{c.chips.map(x=><span key={x}>{x}</span>)}</div>
-      <div className="acts">{c.link!==null&&(c.link?<a className="btn ghost" href={c.link} target="_blank" rel="noreferrer">EXPLORE</a>:<button className="btn ghost off" onClick={soon}>EXPLORE</button>)}<Reg/></div>
+      <div className="acts">
+        {c.id === 'pre' ? (
+          <Reg />
+        ) : (
+          c.link ? (
+            <a className="btn ghost" href={c.link} target="_blank" rel="noreferrer">EXPLORE</a>
+          ) : (
+            <button className="btn ghost" onClick={() => soon('COMING SOON !!')}>EXPLORE</button>
+          )
+        )}
+      </div>
     </article>)}</div>
   </section>
 
@@ -192,6 +203,6 @@ export default function App(){
   </section>
   </main>
   <footer><div className="px">MADATHON 2026 · MADC · KEC</div><p>Innovate · Build · Deploy &nbsp;|&nbsp; Powered by NOVA</p></footer>
-  <div className={'toast px'+(toast?' show':'')}>LINK COMING SOON!</div>
+  <div className={'toast px' + (toast ? ' show' : '')}>{toastMsg}</div>
   </>)
 }
