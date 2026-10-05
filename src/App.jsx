@@ -275,6 +275,12 @@ export default function App(){
                   <span key={s}>{s}</span>
                 ))}
               </div>
+              {activeModal.techNote && (
+                <div className="modal-tech-note">
+                  <span className="star-icon">💡</span>
+                  <span>{activeModal.techNote}</span>
+                </div>
+              )}
             </div>
           )}
 

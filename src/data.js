@@ -24,6 +24,7 @@ export const DOMAINS=[
       "Sustainable Tech & Civic Innovations"
     ],
     techStack:["React / Next.js", "Node.js / Express", "Python / FastAPI", "PostgreSQL / Supabase", "Tailwind CSS", "WebSockets"],
+    techNote:"These are recommended options — you are completely free to use ANY other web tech stack, language, database, or frameworks of your choice!",
     evaluation:[
       "Originality & Practical Feasibility (25%)",
       "Technical Architecture & Code Quality (25%)",
@@ -50,6 +51,7 @@ export const DOMAINS=[
       "FinTech, Expense Tracking & Community Networking"
     ],
     techStack:["Flutter", "React Native", "Kotlin / Android", "Firebase / Supabase", "REST APIs", "SQLite / Hive"],
+    techNote:"These are recommended options — you are completely free to use ANY other mobile frameworks, SDKs, or tools of your choice!",
     evaluation:[
       "App UX, Smooth Navigation & Polish (25%)",
       "Feature Depth & Real-World Utility (25%)",
@@ -76,6 +78,7 @@ export const DOMAINS=[
       "Creative Content Generators & Voice-Driven AI Assistants"
     ],
     techStack:["OpenAI / Gemini / Claude APIs", "LangChain / LlamaIndex", "Vector DBs (Chroma / Pinecone)", "Python / FastAPI", "Streamlit / React"],
+    techNote:"These are recommended options — you are completely free to use ANY other AI models, APIs, libraries, or tech stack of your choice!",
     evaluation:[
       "Novelty & Creative Application of GenAI (30%)",
       "Accuracy, Context Awareness & Prompt Engineering (25%)",
