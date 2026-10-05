@@ -79,6 +79,7 @@ export default function App(){
   const [tab,setTab]=useState('all')
   const [toast,setToast]=useState(false)
   const [toastMsg,setToastMsg]=useState('COMING SOON !!')
+  const [activeModal,setActiveModal]=useState(null)
   const [open,setOpen]=useState(false)
   const cd=useCountdown(CONFIG.REG_DEADLINE)
   const ready=stage>=2
@@ -86,7 +87,18 @@ export default function App(){
     const a=setTimeout(()=>setStage(1),2800),b=setTimeout(()=>setStage(2),5600)
     return()=>{clearTimeout(a);clearTimeout(b)}
   },[])
-  useEffect(()=>{document.body.style.overflow=ready?'':'hidden'},[ready])
+  useEffect(()=>{
+    if(activeModal){
+      document.body.style.overflow='hidden'
+    } else {
+      document.body.style.overflow=ready?'':'hidden'
+    }
+  },[activeModal,ready])
+  useEffect(()=>{
+    const handleKey=(e)=>{if(e.key==='Escape')setActiveModal(null)}
+    window.addEventListener('keydown',handleKey)
+    return()=>window.removeEventListener('keydown',handleKey)
+  },[])
   useEffect(()=>{
     if(!ready)return
     const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15})
@@ -162,11 +174,7 @@ export default function App(){
         {c.id === 'pre' ? (
           <Reg />
         ) : (
-          c.link ? (
-            <a className="btn ghost" href={c.link} target="_blank" rel="noreferrer">EXPLORE</a>
-          ) : (
-            <button className="btn ghost" onClick={() => soon('COMING SOON !!')}>EXPLORE</button>
-          )
+          <button className="btn ghost" onClick={() => setActiveModal(c)}>EXPLORE</button>
         )}
       </div>
     </article>)}</div>
@@ -199,10 +207,85 @@ export default function App(){
   </section>
 
   <section id="coord"><h2 className="px rv">EVENT COORDINATORS</h2><i className="ul"/><p className="sb rv">Reach out for assistance and queries</p>
-    <div className="grid g2 cc">{COORDS.map(c=><article className="card rv" key={c.name}><div className="av px">{c.ini}</div><span className="chip px">{c.role.toUpperCase()}</span><h3 className="px">{c.name}</h3></article>)}</div>
+    <div className="grid g2 cc">{COORDS.map(c=><article className="card rv" key={c.name}>
+      <div className="av px">{c.ini}</div>
+      <span className="chip px">{c.role.toUpperCase()}</span>
+      <h3 className="px">{c.name}</h3>
+      {c.phone && <a className="coord-phone px" href={`tel:${c.phone}`}>📞 +91 {c.phone}</a>}
+    </article>)}</div>
   </section>
   </main>
   <footer><div className="px">MADATHON 2026 · MADC · KEC</div><p>Innovate · Build · Deploy &nbsp;|&nbsp; Powered by NOVA</p></footer>
   <div className={'toast px' + (toast ? ' show' : '')}>{toastMsg}</div>
+
+  {activeModal && (
+    <div className="modal-overlay" onClick={() => setActiveModal(null)}>
+      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header">
+          <div className="modal-title-group">
+            <span className="modal-icon">{activeModal.icon}</span>
+            <div>
+              <span className="chip px">DOMAIN DETAILS</span>
+              <h3 className="px modal-title">{activeModal.name}</h3>
+            </div>
+          </div>
+          <button className="modal-close px" onClick={() => setActiveModal(null)} title="Close Modal">✕</button>
+        </div>
+
+        <div className="modal-body">
+          <p className="modal-tagline">{activeModal.tagline || activeModal.desc}</p>
+
+          {activeModal.tracks && (
+            <div className="modal-section">
+              <h4 className="px modal-section-title">🎯 KEY FOCUS TRACKS</h4>
+              <ul className="modal-list">
+                {activeModal.tracks.map((t, idx) => (
+                  <li key={idx}><span className="bullet">▶</span> {t}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {activeModal.themes && (
+            <div className="modal-section">
+              <h4 className="px modal-section-title">💡 SAMPLE THEMES &amp; IDEAS</h4>
+              <ul className="modal-list">
+                {activeModal.themes.map((th, idx) => (
+                  <li key={idx}><span className="bullet">✦</span> {th}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {activeModal.techStack && (
+            <div className="modal-section">
+              <h4 className="px modal-section-title">🛠️ RECOMMENDED TECH STACK</h4>
+              <div className="chips modal-chips">
+                {activeModal.techStack.map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeModal.evaluation && (
+            <div className="modal-section">
+              <h4 className="px modal-section-title">⚖️ EVALUATION CRITERIA</h4>
+              <ul className="modal-list">
+                {activeModal.evaluation.map((ev, idx) => (
+                  <li key={idx}><span className="bullet">■</span> {ev}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        <div className="modal-footer">
+          <Reg />
+          <button className="btn ghost px" onClick={() => setActiveModal(null)}>CLOSE</button>
+        </div>
+      </div>
+    </div>
+  )}
   </>)
 }
