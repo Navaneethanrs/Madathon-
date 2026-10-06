@@ -217,7 +217,7 @@ export default function App(){
   </section>
 
   <section id="coord"><h2 className="px rv">EVENT COORDINATORS</h2><i className="ul"/><p className="sb rv">Reach out for assistance and queries</p>
-    <div className="grid g2 cc">{COORDS.map(c=><article className="card rv" key={c.name}>
+    <div className="grid cc">{COORDS.map(c=><article className="card rv" key={c.name}>
       <div className="av px">{c.ini}</div>
       <span className="chip px">{c.role.toUpperCase()}</span>
       <h3 className="px">{c.name}</h3>

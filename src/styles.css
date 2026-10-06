@@ -108,7 +108,7 @@ h2{font-size:clamp(16px,3.4vw,28px);color:var(--cream);letter-spacing:2px}
 .tabs button{background:#1d0a05;color:var(--cream);border:2px solid #5a2a18;padding:10px 12px;font-size:9px}
 .tabs .on,.tabs button:hover{background:var(--rust);border-color:var(--sun)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.cc{max-width:640px;margin:auto}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.cc{max-width:1040px;margin:auto}
 #about .g2{grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
 .card{background:var(--cd);border:2px solid #4a1d10;padding:22px 18px;text-align:left;display:flex;flex-direction:column;gap:12px;height:100%;transition:.18s}
 .card:hover{transform:translateY(-6px);border-color:var(--sun);box-shadow:0 8px 0 var(--rust),0 0 26px #ffb12a44}

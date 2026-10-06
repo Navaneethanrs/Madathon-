@@ -88,8 +88,10 @@ export const DOMAINS=[
   },
 ]
 export const COORDS=[
+  {name:"Harish Kannan N",role:"Coordinator",ini:"HK",phone:"8667577236"},
   {name:"Navaneethan RS",role:"Coordinator",ini:"NR",phone:"9342512455"},
-  {name:"Dhanushree M",role:"Coordinator",ini:"DM",phone:"8438807326"}
+  {name:"Dhanushree M",role:"Coordinator",ini:"DM",phone:"8438807326"},
+  {name:"Bhavana R",role:"Coordinator",ini:"BR",phone:"8903055603"}
 ]
 export const PARTNERS=[
   {
