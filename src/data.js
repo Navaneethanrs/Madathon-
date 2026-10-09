@@ -1,8 +1,9 @@
 // ====== EDIT HERE: paste your links / dates when ready (leave "" until then) ======
 export const CONFIG={
   REG_LINK:"https://forms.gle/6DwmqDZEUsJX8nGA6",            // registration form link
-  REG_DEADLINE:"2026-10-16T09:00:00+05:30", // Countdown to October 16, 2026
+  REG_DEADLINE:"2026-10-11T23:59:59+05:30", // Countdown to October 11, 2026
   DATE_TEXT:"EVENT DATE · OCTOBER 16, 2026",
+  REG_LAST_DATE:"LAST DATE TO REGISTER: 11.10.2026",
 }
 export const DOMAINS=[
   {
@@ -60,29 +61,29 @@ export const DOMAINS=[
     ]
   },
   {
-    id:"gen",
-    name:"GENERATIVE AI",
+    id:"aiml",
+    name:"ARTIFICIAL INTELLIGENCE & MACHINE LEARNING",
     icon:"🤖",
-    desc:"Create with intelligent models: assistants, tools and new experiences.",
-    tagline:"Harness the power of LLMs, multimodal models, and autonomous AI agents.",
+    desc:"Build intelligent systems, predictive models, deep learning architectures, and modern AI solutions.",
+    tagline:"Harness Machine Learning, Deep Neural Networks, Computer Vision, NLP, and Foundation Models.",
     tracks:[
-      "Retrieval-Augmented Generation (RAG) & Vector Databases (Chroma, Pinecone, FAISS)",
-      "Autonomous Multi-Agent Systems & Task Orchestration (LangChain, CrewAI, AutoGen)",
-      "Multimodal AI Applications (Vision, Voice/Speech-to-Text, Image Generation)",
-      "Fine-Tuning, Prompt Engineering Pipelines & Guardrails against Hallucinations"
+      "Machine Learning & Deep Learning (Supervised/Unsupervised, Neural Networks, PyTorch/TensorFlow)",
+      "Computer Vision & Speech/Audio Intelligence (Object Detection, Image Segmentation, Whisper)",
+      "Natural Language Processing (NLP), LLMs & RAG Architectures (LangChain, LlamaIndex, Vector DBs)",
+      "Predictive Analytics, Edge AI, Autonomous Agents & Intelligent Automation"
     ],
     themes:[
-      "Automated Code Reviewers, Intelligent Copilots & Dev Tools",
-      "Context-Aware Academic Tutors & Personalized Learning Mentors",
-      "Medical/Legal Document Synthesis & Multi-Agent Researchers",
-      "Creative Content Generators & Voice-Driven AI Assistants"
+      "Healthcare Diagnostics, Patient Monitoring & Assistive AI Systems",
+      "Smart Agriculture, Crop Health Analysis & Yield Prediction",
+      "Autonomous Code Copilots, Dev Tools & Intelligent Academic Mentors",
+      "Financial Fraud Detection, Risk Analytics & Predictive Modeling"
     ],
-    techStack:["OpenAI / Gemini / Claude APIs", "LangChain / LlamaIndex", "Vector DBs (Chroma / Pinecone)", "Python / FastAPI", "Streamlit / React"],
-    techNote:"These are recommended options — you are completely free to use ANY other AI models, APIs, libraries, or tech stack of your choice!",
+    techStack:["Python", "PyTorch / TensorFlow", "Scikit-Learn", "OpenCV / MediaPipe", "Hugging Face / Transformers", "FastAPI / Flask"],
+    techNote:"These are recommended options — you are completely free to use ANY other AI/ML models, libraries, frameworks, or tech stack of your choice!",
     evaluation:[
-      "Novelty & Creative Application of GenAI (30%)",
-      "Accuracy, Context Awareness & Prompt Engineering (25%)",
-      "End-to-End Functionality & API Integration (25%)",
+      "Model Innovation, Architecture & Feasibility (30%)",
+      "Data Pipeline, Accuracy & Training Quality (25%)",
+      "End-to-End Functionality & Application Integration (25%)",
       "User Experience & Interactive Interface (20%)"
     ]
   },

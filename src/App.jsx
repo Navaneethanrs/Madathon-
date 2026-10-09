@@ -108,7 +108,7 @@ export default function App(){
   const Reg=({cls=''})=>CONFIG.REG_LINK
     ?<a className={'btn '+cls} href={CONFIG.REG_LINK} target="_blank" rel="noreferrer">REGISTER</a>
     :<button className={'btn off '+cls} onClick={()=>soon('REGISTRATION COMING SOON !')}>REGISTER</button>
-  const cards=[{id:'pre',tag:'ROUND 1',name:'PRELIMS',icon:'🎤',desc:'Present your own problem statement to the juries. They evaluate your idea and the best teams advance to the finals.',chips:['PITCH','JURY EVALUATION'],link:null},
+  const cards=[{id:'pre',tag:'ROUND 1',name:'PRELIMS',icon:'🎤',desc:'Present your own problem statement to the juries. They evaluate your idea and the best teams advance to the finals.',chips:['PITCH','JURY EVALUATION','LAST DATE: 11.10.2026'],link:null},
     ...DOMAINS.map(d=>({...d,tag:'FINALIST ROUND',chips:['24 HRS','DOMAIN']}))]
   const shown=cards.filter(c=>tab==='all'||(tab==='pre'?c.id==='pre':c.id!=='pre'))
   const go=()=>setOpen(false)
@@ -156,8 +156,9 @@ export default function App(){
       <p className="px org">MADC · MOBILE APPLICATION DEVELOPMENT CLUB</p>
       <h1 className="px title">MADATHON</h1>
       <div className="px tag">24-HOUR HACKATHON</div>
-      <p className="px ttl">COUNTDOWN TO EVENT</p>
+      <p className="px ttl">COUNTDOWN TO REGISTRATION CLOSE</p>
       <div className="cdw">{['DAYS','HRS','MINS','SECS'].map((l,i)=><div className="cb" key={l}><b className="px">{String(cd[i]).padStart(2,'0')}</b><small>{l}</small></div>)}</div>
+      <div className="reg-deadline-badge px">⏳ LAST DATE FOR REGISTRATION: 11.10.2026</div>
       <p className="px date">{CONFIG.DATE_TEXT}</p>
       <Reg cls="big"/>
       <p className="pw">Powered by NOVA</p>
@@ -199,7 +200,7 @@ export default function App(){
       <article className="card full rv">
         <img className="kl wide" src="./madathon-logo.png" alt="MADATHON"/>
         <h3 className="px">ABOUT MADATHON</h3>
-        <p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across three exciting domains: App Development, Web Development, and Generative AI. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p>
+        <p>MADATHON is a 24-hour technical hackathon organized by the Mobile Application Development Club (MADC). It brings together passionate innovators and developers to transform creative ideas into real-world solutions. Participants can compete across three exciting domains: App Development, Web Development, and Artificial Intelligence & Machine Learning. The event challenges participants to build, innovate, collaborate, and solve problems within an intense 24-hour timeframe. Think beyond limits, code without boundaries, and build something extraordinary at MADATHON!</p>
         <div className="mot px"><span>24-HOUR HACKATHON</span><span>3 DOMAINS</span><span>INNOVATION</span><span>REAL-WORLD IMPACT</span></div>
       </article>
     </div>
