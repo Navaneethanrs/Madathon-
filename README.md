@@ -1,5 +1,10 @@
 # MADATHON – 24-Hour Hackathon (MADC · KEC)
 
+![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
 A retro pixel-art styled 24-hour hackathon web application built with React and Vite.
 
 ## Features
