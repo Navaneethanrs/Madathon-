@@ -19,10 +19,24 @@ A retro pixel-art styled 24-hour hackathon web application built with React and 
 | **Registration Deadline** | October 11, 2026 |
 
 ## ✨ Features
-- Dynamic pixel-art desert landscape with animated flying crows.
-- Real-time countdown timer to October 16, 2026.
-- Event domains and registration handling.
-- Mobile-responsive navigation and interactive UI.
+- 🏜️ Dynamic pixel-art desert landscape with animated flying crows.
+- ⏱️ Real-time countdown timer to October 16, 2026.
+- 🌐 Event domains and registration handling.
+- 📱 Mobile-responsive navigation and interactive UI.
+- 🔍 Interactive domain explore modal with tech stack flexibility info.
+- 🤝 Event partners section with sponsor logos.
+- 👥 Coordinator listing with contact details.
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 18, JSX |
+| **Build Tool** | Vite 5 |
+| **Styling** | CSS3, custom pixel-art design |
+| **Animation** | CSS keyframes, canvas-based sprites |
+| **Hosting** | Static build (`/dist`) |
+
 
 ## Run Locally
 ```bash
