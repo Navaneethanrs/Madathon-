@@ -81,3 +81,29 @@ Open `src/data.js` to customize:
 - `CONFIG.DATE_TEXT` → Displayed date banner
 - `DOMAINS` → Event domains and explore links
 - `COORDS` → Event coordinators list
+
+## 🤝 Contributing
+
+We welcome contributions to improve the MADATHON website!
+
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feat/your-feature`
+3. **Commit** your changes: `git commit -m "feat: add your feature"`
+4. **Push** to the branch: `git push origin feat/your-feature`
+5. **Open** a Pull Request
+
+Please follow the existing code style and add meaningful commit messages.
+
+## 📜 License
+
+This project is licensed under the **MIT License** — feel free to use and modify for your own hackathon events.
+
+## 🙌 Acknowledgements
+
+- **MADC (Madras AI & Data Club)** — Organizing body
+- **KEC (Kongu Engineering College)** — Host institution
+- All event coordinators, sponsors, and participants who make MADATHON possible!
+
+---
+
+> *Built with ❤️ by the MADC team · Last updated: October 20, 2026*
