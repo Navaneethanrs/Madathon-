@@ -38,17 +38,46 @@ A retro pixel-art styled 24-hour hackathon web application built with React and 
 | **Hosting** | Static build (`/dist`) |
 
 
-## Run Locally
+## 🚀 Run Locally
+
+### Prerequisites
+- Node.js v18+ and npm
+
+### Steps
 ```bash
+# 1. Clone the repository
+git clone <repo-url>
+cd madathon
+
+# 2. Install dependencies
 npm install
+
+# 3. Start development server
 npm run dev        # http://localhost:5173
-npm run build      # production build in /dist
+
+# 4. Build for production
+npm run build      # Output in /dist
+npm run preview    # Preview production build
 ```
 
-## Configuration
-Open `src/data.js`:
-- `CONFIG.REG_LINK` -> Registration form URL
-- `CONFIG.REG_DEADLINE` -> Target date for countdown timer
-- `CONFIG.DATE_TEXT` -> Displayed date banner
-- `DOMAINS` -> Event domains and explore links
-- `COORDS` -> Event coordinators list
+## 📁 Project Structure
+
+```
+madathon/
+├── public/           # Static assets
+├── src/
+│   ├── components/   # React components
+│   ├── data.js       # Event config & data
+│   └── main.jsx      # App entry point
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## ⚙️ Configuration
+Open `src/data.js` to customize:
+- `CONFIG.REG_LINK` → Registration form URL
+- `CONFIG.REG_DEADLINE` → Target date for countdown timer
+- `CONFIG.DATE_TEXT` → Displayed date banner
+- `DOMAINS` → Event domains and explore links
+- `COORDS` → Event coordinators list
