@@ -7,7 +7,18 @@
 
 A retro pixel-art styled 24-hour hackathon web application built with React and Vite.
 
-## Features
+## 📅 Event Overview
+
+| Detail | Info |
+|--------|------|
+| **Event** | MADATHON – 24-Hour Hackathon |
+| **Organizer** | MADC @ KEC |
+| **Date** | October 16, 2026 |
+| **Duration** | 24 Hours |
+| **Theme** | Innovation × Technology |
+| **Registration Deadline** | October 11, 2026 |
+
+## ✨ Features
 - Dynamic pixel-art desert landscape with animated flying crows.
 - Real-time countdown timer to October 16, 2026.
 - Event domains and registration handling.
